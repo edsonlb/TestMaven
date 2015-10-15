@@ -1,7 +1,6 @@
-MAVEN TEST PROJECT! Nothing more... 
-<br />
-Edson.
+MAVEN and REST test project using new version of Netbeans! Nothing more... 
 =========
+
 <br />
 edson:mavenproject1 edsonlb$ mvn --version
 Apache Maven 3.3.3 (7994120775791599e205a5524ec3e0dfe41d4a06; 2015-04-22T08:57:37-03:00)
