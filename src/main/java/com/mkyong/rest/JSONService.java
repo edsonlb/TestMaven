@@ -13,8 +13,7 @@ import com.mkyong.Track;
 @Path("/json/discos")
 public class JSONService {
 
-	@GET
-	@Path("/get")
+	@GET //@Path("/get")
         @Produces(MediaType.APPLICATION_JSON)
 	public Track[] getTrackInJSON() {
                 Track[] tracks = new Track[3];
@@ -26,27 +25,26 @@ public class JSONService {
                 tracks[0] = track1;
                 
                 Track track2 = new Track();
-		track2.setTitulo("");
-		track2.setBanda("Mais um!");
+		track2.setTitulo("Bloddy");
+		track2.setBanda("Rockafeller");
                 
                 tracks[1] = track2;
                 
                 Track track3 = new Track();
 		track3.setTitulo("Enter Sandman");
-		track3.setBanda("Metallica");
+		track3.setBanda("Foofighters");
                 
                 tracks[2] = track3;
 
 		return tracks;
 	}
 
-	@POST
-	@Path("/post")
+	@POST //@Path("/post")
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Response createTrackInJSON(Track track) {
 
-		String result = "Registro Salvo : " + track;
-		return Response.status(201).entity(result).build();
+		String resultado = "Registro Salvo : " + track;
+		return Response.status(201).entity(resultado).build();
 		
 	}
 	
