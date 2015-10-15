@@ -15,30 +15,29 @@ public class JSONService {
 
 	@GET
 	@Path("/get")
-	@Produces(MediaType.APPLICATION_JSON)
+        @Produces(MediaType.APPLICATION_JSON)
 	public Track[] getTrackInJSON() {
                 Track[] tracks = new Track[3];
                 
 		Track track1 = new Track();
 		track1.setTitulo("Fuel");
-		track1.setSinger("Metallica");
+		track1.setBanda("Metallica");
                 
                 tracks[0] = track1;
                 
                 Track track2 = new Track();
-		track2.setTitle("");
-		track2.setSinger("Mais um!");
+		track2.setTitulo("");
+		track2.setBanda("Mais um!");
                 
                 tracks[1] = track2;
                 
                 Track track3 = new Track();
-		track3.setTitle("Enter Sandman");
-		track3.setSinger("Metallica");
+		track3.setTitulo("Enter Sandman");
+		track3.setBanda("Metallica");
                 
                 tracks[2] = track3;
 
 		return tracks;
-
 	}
 
 	@POST
@@ -46,7 +45,7 @@ public class JSONService {
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Response createTrackInJSON(Track track) {
 
-		String result = "Track saved : " + track;
+		String result = "Registro Salvo : " + track;
 		return Response.status(201).entity(result).build();
 		
 	}
