@@ -1,5 +1,7 @@
 package com.mkyong;
 
+//http://localhost:8084/mavenproject1/rest/json/discos
+
 public class Track {
 
     String titulo;
